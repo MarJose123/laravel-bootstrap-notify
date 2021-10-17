@@ -1,0 +1,13 @@
+{
+    "dockerComposeFile": [
+		"../../../laradock/docker-compose.yml"
+	],
+    "DockerRun.DisableDockerrc": true,
+    // Add the IDs of any extensions you want installed in the array below.
+	"extensions": [
+		"onecentlin.laravel-blade",
+		"felixfbecker.php-intellisense",
+		"amiralizadeh9480.laravel-extra-intellisense",
+		"fterrag.vscode-php-cs-fixer"
+	]
+}
