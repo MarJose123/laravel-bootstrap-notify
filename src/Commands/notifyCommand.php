@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Marjose\notify\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class notifyCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-bootstrap-notify';
 
     public $description = 'My command';
 
