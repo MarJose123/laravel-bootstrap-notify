@@ -2,9 +2,9 @@
 
 namespace Marjose\notify;
 
+use Marjose\notify\Commands\notifyCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Marjose\notify\Commands\notifyCommand;
 
 class notifyServiceProvider extends PackageServiceProvider
 {
