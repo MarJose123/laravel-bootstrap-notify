@@ -52,7 +52,7 @@
                 "Marjose\\notify\\notifyServiceProvider"
             ],
             "aliases": {
-                "notify": "Marjose\\notify\\notifyFacade"
+                "notify": "Marjose\\notify\\Facade\\notifyFacade"
             }
         }
     },

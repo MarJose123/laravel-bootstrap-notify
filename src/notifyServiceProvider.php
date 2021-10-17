@@ -19,7 +19,6 @@ class notifyServiceProvider extends PackageServiceProvider
             ->name('laravel-bootstrap-notify')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-bootstrap-notify_table')
             ->hasCommand(notifyCommand::class);
     }
 }

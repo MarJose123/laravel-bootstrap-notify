@@ -1,6 +1,6 @@
 <?php
 
-namespace Marjose\notify;
+namespace Marjose\notify\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class notifyFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-bootstrap-notify';
+        return 'notify';
     }
 }
