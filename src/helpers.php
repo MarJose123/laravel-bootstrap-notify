@@ -23,7 +23,6 @@ if (! function_exists('notifyJs')) {
     {
         return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
     }
-
 }
 
 if (! function_exists('notifyCss')) {
