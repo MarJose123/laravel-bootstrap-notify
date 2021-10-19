@@ -35,11 +35,12 @@
         "psr-4": {
             "Marjose\\notify\\": "src",
             "Marjose\\notify\\Database\\Factories\\": "database/factories"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
-    "files": [
-        "src/helpers.php"
-    ],
+
     "autoload-dev": {
         "psr-4": {
             "Marjose\\notify\\Tests\\": "tests"
