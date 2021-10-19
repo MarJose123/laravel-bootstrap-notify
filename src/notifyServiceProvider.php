@@ -23,7 +23,6 @@ class notifyServiceProvider extends PackageServiceProvider
             ->hasConfigFile('notify')
             ->hasAssets()
             ->hasViewComponents('notify', Alert::class);
-
     }
 
     public function registeringPackage(): void
@@ -41,10 +40,5 @@ class notifyServiceProvider extends PackageServiceProvider
         Blade::directive('notifyJs', function () {
             return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
         });
-    }
-
-    public function registerComponents(): void
-    {
-        Blade::component(Alert::class, 'notify-messages');
     }
 }
