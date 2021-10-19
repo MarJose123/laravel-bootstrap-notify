@@ -1,12 +1,12 @@
 @if (session()->has('notify.message'))
 
-    @include('notify::resources.views.notifications.danger')
+    @include('notify::notifications.danger')
 
-    @include('notify::resources.views.notifications.info')
+    @include('notify::notifications.info')
 
-    @include('notify::resources.views.notifications.success')
+    @include('notify::notifications.success')
 
-    @include('notify::resources.views.notifications.warning')
+    @include('notify::notifications.warning')
 
 @endif
 
