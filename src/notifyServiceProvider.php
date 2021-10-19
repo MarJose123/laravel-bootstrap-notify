@@ -4,6 +4,7 @@ namespace Marjose\notify;
 
 use Illuminate\Support\Facades\Blade;
 use Marjose\notify\Commands\notifyCommand;
+use Marjose\notify\Storage\Session;
 use Marjose\notify\View\Components\NotifyComponent;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -21,7 +22,8 @@ class notifyServiceProvider extends PackageServiceProvider
             ->name('laravel-bootstrap-notify')
             ->hasConfigFile('notify')
             ->hasAssets()
-            ->hasCommand(notifyCommand::class);
+            ->hasViewComponents('notify-messages', NotifyComponent::class)
+            ;
     }
 
     public function registeringPackage(): void
@@ -30,10 +32,12 @@ class notifyServiceProvider extends PackageServiceProvider
             return $app->make(notify::class);
         });
 
-        Blade::directive('notifyJs', function () {
-            return '<?php echo notifyJs(); ?>';
+        Blade::directive('notifyCss', function () {
+            return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/bootstrap-notify/css/app.css').'"/>';
         });
 
-        Blade::component(NotifyComponent::class, 'notify-messages');
+        Blade::directive('notifyJs', function () {
+            return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
+        });
     }
 }
