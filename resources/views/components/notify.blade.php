@@ -13,7 +13,7 @@
 {{ session()->forget('notify.message') }}
 
 <script>
-    var notify = {
+    let notify = {
         timeout: "{{ config('notify.timeout') }}",
     }
 </script>
