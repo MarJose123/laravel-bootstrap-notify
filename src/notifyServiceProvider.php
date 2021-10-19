@@ -27,8 +27,8 @@ class notifyServiceProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
-        $this->app->bind('notify', function ($app) {
-            return new notify();
+        $this->app->singleton('notify', function ($app) {
+            return $app->make(notify::class);
         });
 
         Blade::directive('notifyJs', function () {
