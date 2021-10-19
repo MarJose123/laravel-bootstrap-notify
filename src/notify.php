@@ -9,7 +9,6 @@ class notify
 {
     protected Session $session;
 
-
     /**
      * Create a new notify instance.
      *
@@ -33,6 +32,7 @@ class notify
 
         return $this;
     }
+
     /**
      * Flash a success message.
      *
@@ -110,15 +110,14 @@ class notify
         return $this;
     }
 
-
     public function flash(string $message, $type = null, $icon = null, string $model = null, string $title = null): void
     {
         $notifications = [
             'message' => $message,
-            'type'    => $type,
-            'icon'    => $icon,
-            'model'   => $model,
-            'title'   => $title,
+            'type' => $type,
+            'icon' => $icon,
+            'model' => $model,
+            'title' => $title,
         ];
 
         $this->session->flash('notify', $notifications);
