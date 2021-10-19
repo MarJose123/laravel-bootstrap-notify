@@ -18,7 +18,7 @@ class notifyServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-bootstrap-notify')
-            ->hasConfigFile()
+            ->hasConfigFile('notify')
             ->hasViews()
             ->hasAssets()
             ->hasViewComponent('notify-messages', NotifyComponent::class)
