@@ -21,7 +21,6 @@ class notifyServiceProvider extends PackageServiceProvider
             ->name('laravel-bootstrap-notify')
             ->hasConfigFile('notify')
             ->hasAssets()
-            ->hasViewComponents('notify-messages', NotifyComponent::class)
             ->hasCommand(notifyCommand::class);
     }
 
@@ -34,5 +33,7 @@ class notifyServiceProvider extends PackageServiceProvider
         Blade::directive('notifyJs', function () {
             return '<?php echo notifyJs(); ?>';
         });
+
+        Blade::component(NotifyComponent::class, 'notify-messages');
     }
 }
