@@ -31,7 +31,7 @@ class notifyServiceProvider extends PackageServiceProvider
         $this->registerComponents();
 
         $this->app->singleton('notify', function ($app) {
-            return $app->make(Alert::class);
+            return $app->make(notify::class);
         });
 
         Blade::directive('notifyCss', function () {

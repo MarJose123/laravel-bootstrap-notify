@@ -19,9 +19,9 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": ">=7.4",
         "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "illuminate/contracts": "~6.0|~7.0|~8.0"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.3",
@@ -37,6 +37,9 @@
             "Marjose\\notify\\Database\\Factories\\": "database/factories"
         }
     },
+    "files": [
+        "src/helpers.php"
+    ],
     "autoload-dev": {
         "psr-4": {
             "Marjose\\notify\\Tests\\": "tests"
@@ -55,7 +58,7 @@
                 "Marjose\\notify\\notifyServiceProvider"
             ],
             "aliases": {
-                "notify": "Marjose\\notify\\Facades\\notify"
+                "Notify": "Marjose\\notify\\Facades\\notify"
             }
         }
     },
