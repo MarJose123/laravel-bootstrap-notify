@@ -2,7 +2,7 @@
 
 use Marjose\notify\notify;
 
-if (! function_exists('notify')) {
+if (! function_exists('notify') || function_exists('Notify')) {
     function notify(string $message = null, string $title = null): notify
     {
         $notify = app('notify');

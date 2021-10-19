@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Marjose\notify\notify
  */
-class notifyFacade extends Facade
+class Notify extends Facade
 {
     protected static function getFacadeAccessor()
     {
