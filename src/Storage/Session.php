@@ -28,5 +28,4 @@ class Session
     {
         $this->session->flash($key, $data);
     }
-
 }
