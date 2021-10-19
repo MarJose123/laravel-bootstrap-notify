@@ -29,8 +29,6 @@ class notifyServiceProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
-        $this->registerComponents();
-
         $this->app->singleton('notify', function ($app) {
             return $app->make(notify::class);
         });
