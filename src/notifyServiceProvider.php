@@ -5,7 +5,7 @@ namespace Marjose\notify;
 use Illuminate\Support\Facades\Blade;
 use Marjose\notify\Commands\notifyCommand;
 use Marjose\notify\Storage\Session;
-use Marjose\notify\View\Components\NotifyComponent;
+use Marjose\notify\View\Components\Notify;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,7 +22,8 @@ class notifyServiceProvider extends PackageServiceProvider
             ->name('laravel-bootstrap-notify')
             ->hasConfigFile('notify')
             ->hasAssets()
-            ;
+            ->hasViewComponents('notify', Notify::class);
+
     }
 
     public function registeringPackage(): void
@@ -44,6 +45,6 @@ class notifyServiceProvider extends PackageServiceProvider
 
     public function registerComponents(): void
     {
-        Blade::component(NotifyComponent::class, 'notify-messages');
+        Blade::component(Notify::class, 'notify-messages');
     }
 }

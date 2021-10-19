@@ -4,7 +4,7 @@ namespace Marjose\notify\View\Components;
 
 use Illuminate\View\Component;
 
-class NotifyComponent extends Component
+class Notify extends Component
 {
     /**
      * @inheritDoc
