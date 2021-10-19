@@ -29,7 +29,7 @@ class notify
      */
     public function info(string $message, string $title = null): self
     {
-        $this->flash($message, 'info', '❗', 'toast', $title);
+        $this->flash($message, 'info', '❗', null, $title);
 
         return $this;
     }
@@ -42,7 +42,7 @@ class notify
      */
     public function success(string $message, string $title = null): self
     {
-        $this->flash($message, 'success', '✅', 'toast', $title);
+        $this->flash($message, 'success', '✅', null, $title);
 
         return $this;
     }
@@ -56,7 +56,7 @@ class notify
      */
     public function error(string $message, string $title = null): self
     {
-        $this->flash($message, 'error', '❌', 'toast', $title);
+        $this->flash($message, 'error', '❌', null, $title);
 
         return $this;
     }
