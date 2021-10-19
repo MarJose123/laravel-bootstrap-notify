@@ -21,4 +21,11 @@ class notifyServiceProvider extends PackageServiceProvider
             ->hasViews()
             ->hasCommand(notifyCommand::class);
     }
+
+    public function registeringPackage(): void
+    {
+        $this->app->bind('notify', function ($app) {
+            return new notify();
+        });
+    }
 }

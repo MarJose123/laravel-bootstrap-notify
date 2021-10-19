@@ -1,6 +1,6 @@
 <?php
 
-namespace Marjose\notify\Facade;
+namespace Marjose\notify\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

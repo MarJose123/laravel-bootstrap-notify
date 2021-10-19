@@ -4,7 +4,10 @@
     "keywords": [
         "marjose",
         "laravel",
-        "laravel-bootstrap-notify"
+        "laravel-bootstrap-notify",
+        "bootstrap",
+        "notification",
+        "laravel notify"
     ],
     "homepage": "https://github.com/marjose/laravel-bootstrap-notify",
     "license": "MIT",
@@ -52,7 +55,7 @@
                 "Marjose\\notify\\notifyServiceProvider"
             ],
             "aliases": {
-                "notify": "Marjose\\notify\\Facade\\notifyFacade"
+                "notify": "Marjose\\notify\\Facades\\notifyFacade"
             }
         }
     },
