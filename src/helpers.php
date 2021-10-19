@@ -23,4 +23,14 @@ if (! function_exists('notifyJs')) {
     {
         return '<script type="text/javascript" src="'.asset('vendor/Marjose/laravel-bootstrap-notify/js/notify.js').'"></script>';
     }
+
+    if (! function_exists('notifyCss')) {
+        /**
+         * @return string
+         */
+        function notifyCss(): string
+        {
+            return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/Marjose/laravel-bootstrap-notify/css/app.css').'"/>';
+        }
+    }
 }
