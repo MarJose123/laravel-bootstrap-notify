@@ -10,12 +10,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath('public');
-mix.setResourceRoot('../')
-
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/notify.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'resources/dist/js')
+    .js('resources/js/notify.js', 'resources/dist/js')
+    .sass('resources/sass/app.scss', 'resources/dist/css');
 
 if (mix.inProduction()) {
     mix.version();
