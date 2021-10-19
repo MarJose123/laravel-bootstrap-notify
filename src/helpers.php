@@ -21,7 +21,7 @@ if (! function_exists('notifyJs')) {
      */
     function notifyJs(): string
     {
-        return '<script type="text/javascript" src="'.asset('vendor/laravel-bootstrap-notify/js/notify.js').'"></script>';
+        return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
     }
 
     if (! function_exists('notifyCss')) {
@@ -30,7 +30,7 @@ if (! function_exists('notifyJs')) {
          */
         function notifyCss(): string
         {
-            return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/laravel-bootstrap-notify/css/app.css').'"/>';
+            return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/bootstrap-notify/css/app.css').'"/>';
         }
     }
 }
