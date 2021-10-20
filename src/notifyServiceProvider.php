@@ -3,7 +3,7 @@
 namespace Marjose\notify;
 
 use Illuminate\Support\Facades\Blade;
-use Marjose\notify\View\Components\Alert;
+use Marjose\notify\Components\Alert;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

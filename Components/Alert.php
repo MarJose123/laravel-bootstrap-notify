@@ -1,6 +1,6 @@
 <?php
 
-namespace Marjose\notify\View\Components;
+namespace Marjose\notify\Components;
 
 use Illuminate\View\Component;
 
