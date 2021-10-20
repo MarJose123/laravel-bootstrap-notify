@@ -56,7 +56,7 @@ class notify
      */
     public function error(string $message, string $title = null): self
     {
-        $this->flash($message, 'error', '❌', null, $title);
+        $this->flash($message, 'danger', '❌', null, $title);
 
         return $this;
     }
