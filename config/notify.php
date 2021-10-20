@@ -26,6 +26,7 @@ return [
         'user-updated' => [
             'message' => 'The user has been updated successfully.',
             'type'    => 'success',
+            'icon'    => 'fas fa-thumbs-up fa-3x',
             'model'   => 'connect',
             'title'   => 'User Updated',
         ],
