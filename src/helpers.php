@@ -2,7 +2,7 @@
 
 use Marjose\notify\notify;
 
-/*if (! function_exists('notify')) {
+if (! function_exists('notify')) {
     function notify(string $message = null, string $title = null): notify
     {
         $notify = app('notify');
@@ -13,7 +13,7 @@ use Marjose\notify\notify;
 
         return $notify;
     }
-}*/
+}
 
 if (! function_exists('notifyJs')) {
     /**
