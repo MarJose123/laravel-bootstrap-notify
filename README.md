@@ -173,6 +173,7 @@ notify::preset('user-updated');
 
 You can use different Icon css framework like `Fontawesome`, `Bootstrap Icon`, and many others if you use the `preset` functionality.
 
+If you want to modify the styling of the alert you are `free` to make any change of the component in the `views/vendor/notify/notification`
 
 ## Testing
 
