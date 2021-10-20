@@ -3,7 +3,6 @@
 namespace Marjose\notify;
 
 use Illuminate\Support\Facades\Blade;
-use Marjose\notify\Components\Alert;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -21,7 +20,6 @@ class notifyServiceProvider extends PackageServiceProvider
             ->hasConfigFile('notify')
             ->hasAssets()
             ->hasViews()
-            ->hasViewComponent('notify', Alert::class)
             ;
     }
 
@@ -38,5 +36,7 @@ class notifyServiceProvider extends PackageServiceProvider
         Blade::directive('notifyJs', function () {
             return '<?php echo notifyJs() ?>';
         });
+
+        Blade::component(Alert::class, 'notify-messages');
     }
 }
