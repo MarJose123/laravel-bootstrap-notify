@@ -17,11 +17,11 @@ class notifyServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-bootstrap-notify')
+            ->name('notify')
             ->hasConfigFile('notify')
             ->hasAssets()
             ->hasViews()
-            ->hasViewComponents('notify', Alert::class)
+            ->hasViewComponent('notify', Alert::class)
             ;
     }
 
@@ -32,11 +32,11 @@ class notifyServiceProvider extends PackageServiceProvider
         });
 
         Blade::directive('notifyCss', function () {
-            return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/bootstrap-notify/css/app.css').'"/>';
+            return '<?php echo notifyCss() ?>';
         });
 
         Blade::directive('notifyJs', function () {
-            return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
+            return '<?php echo notifyJs() ?>';
         });
     }
 }

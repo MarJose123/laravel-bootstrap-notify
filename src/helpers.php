@@ -2,8 +2,8 @@
 
 use Marjose\notify\notify;
 
-if (! function_exists('notify') || function_exists('Notify')) {
-    function Notify(string $message = null, string $title = null): notify
+/*if (! function_exists('notify')) {
+    function notify(string $message = null, string $title = null): notify
     {
         $notify = app('notify');
 
@@ -13,7 +13,7 @@ if (! function_exists('notify') || function_exists('Notify')) {
 
         return $notify;
     }
-}
+}*/
 
 if (! function_exists('notifyJs')) {
     /**
@@ -21,7 +21,7 @@ if (! function_exists('notifyJs')) {
      */
     function notifyJs(): string
     {
-        return '<script type="text/javascript" src="'.asset('vendor/bootstrap-notify/js/notify.js').'"></script>';
+        return '<script type="text/javascript" src="'.asset('vendor/notify/js/notify.js').'"></script>';
     }
 }
 
@@ -31,6 +31,6 @@ if (! function_exists('notifyCss')) {
      */
     function notifyCss(): string
     {
-        return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/bootstrap-notify/css/app.css').'"/>';
+        return '<link rel="stylesheet" type="text/css" href="'.asset('vendor/notify/css/app.css').'"/>';
     }
 }
