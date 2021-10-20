@@ -13,7 +13,7 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'resources/dist/js')
     .js('resources/js/notify.js', 'resources/dist/js')
     .sass('resources/sass/app.scss', 'resources/dist/css')
-    .copy('fonts', 'resources/dist/');
+    .copy('fonts', 'resources/dist/fonts/');
 
 if (mix.inProduction()) {
     mix.version();
