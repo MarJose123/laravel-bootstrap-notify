@@ -28,7 +28,7 @@ class notify
      */
     public function info(string $message, string $title = null): self
     {
-        $this->flash($message, 'info', '❗', null, $title);
+        $this->flash($message, 'info', 'fas fa-info-circle', null, $title);
 
         return $this;
     }

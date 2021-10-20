@@ -1,1 +1,2 @@
 require('./prism')
+require('./notify')

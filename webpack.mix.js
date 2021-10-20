@@ -12,7 +12,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'resources/dist/js')
     .js('resources/js/notify.js', 'resources/dist/js')
-    .sass('resources/sass/app.scss', 'resources/dist/css');
+    .sass('resources/sass/app.scss', 'resources/dist/css')
+    .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'resources/dist/webfonts');
 
 if (mix.inProduction()) {
     mix.version();
