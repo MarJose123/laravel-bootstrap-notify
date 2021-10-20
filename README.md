@@ -175,6 +175,14 @@ You can use different Icon css framework like `Fontawesome`, `Bootstrap Icon`, a
 
 If you want to modify the styling of the alert you are `free` to make any change of the component in the `views/vendor/notify/notification`
 
+
+
+# Other
+
+if you are looking for the same but for `TailwindCss` you can visit this guy.
+
+- [mckenziearts](https://github.com/mckenziearts/laravel-notify)
+
 ## Testing
 
 ```bash
