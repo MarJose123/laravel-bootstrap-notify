@@ -8,7 +8,17 @@ if (! function_exists('notify')) {
         $notify = app('notify');
 
         if (! is_null($message)) {
-            return $notify->success($message, $title);
+            switch ($title) {
+                case "error":
+                    return $notify->error($message, $title);
+                case "warning":
+                    return $notify->warning($message, $title);
+                case "info":
+                    return $notify->info($message, $title);
+                default:
+                    return $notify->success($message, $title);
+            }
+
         }
 
         return $notify;
