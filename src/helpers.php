@@ -18,7 +18,6 @@ if (! function_exists('notify')) {
                 default:
                     return $notify->success($message, $title);
             }
-
         }
 
         return $notify;
