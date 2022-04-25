@@ -53,16 +53,15 @@ return [
     |--------------------------------------------------------------------------
     |
     | Define any preset messages here that can be reused.
-    |
+    | model: alert or toast
     */
 
     'preset-messages' => [
-        // An example preset 'user updated' Connectify notification.
         'user-updated' => [
             'message' => 'The user has been updated successfully.',
             'type'    => 'success',
             'icon'    => 'fas fa-thumbs-up fa-3x',
-            'model'   => null,
+            'model'   => 'alert',
             'title'   => 'User Updated',
         ],
     ],
@@ -87,8 +86,9 @@ composer dump-autoload
 ```
 2. Add js link with
 ```html
-@notifyJs
+<script src="LINK_TO_YOUR_JQUERY_TEMPLATE.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
+@notifyJs
 ```
 3. Include notify partial to your master layout
 ```html
@@ -137,8 +137,8 @@ A complete example:
     </head>
     <body>
             <x:notify-messages/>
-        @notifyJs
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
+            @notifyJs
     </body>
 </html>
 ```
@@ -157,7 +157,7 @@ You can also use a custom or pre-defined alert by adding it to the config under 
             'message' => 'The user has been updated successfully.',
             'type'    => 'success',
             'icon'    => 'fas fa-thumbs-up fa-3x',
-            'model'   => null,
+            'model'   => 'alert',
             'title'   => 'User Updated',
         ],
 ```
