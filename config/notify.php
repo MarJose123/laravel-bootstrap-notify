@@ -17,7 +17,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Define any preset messages here that can be reused.
-    | Available model: connect, drake, emotify, smiley, toast
+    | Available model: alert, toast
     |
     */
 
@@ -27,7 +27,7 @@ return [
             'message' => 'The user has been updated successfully.',
             'type'    => 'success',
             'icon'    => 'fas fa-thumbs-up fa-3x',
-            'model'   => 'connect',
+            'model'   => 'alert',
             'title'   => 'User Updated',
         ],
     ],
