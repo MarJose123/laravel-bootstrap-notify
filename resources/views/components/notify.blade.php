@@ -1,4 +1,4 @@
-@if (session()->has('notify.message'))
+@if (session()->has('notify.message') && (session()->get('notify.model') === 'alert' || session()->get('notify.model') === null))
 
     @include('notify::notifications.danger')
 
