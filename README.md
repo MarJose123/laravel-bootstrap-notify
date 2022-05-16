@@ -145,10 +145,14 @@ A complete example:
 
 # Types of alerts
 ```php
+/* By default this will be using flash-alert notification of laravel */
 notify()->success($message);
 notify()->error($message);
 notify()->info($message);
 notify()->warning($message);
+
+/* This is will use the Alert notification after the page is refreshed */
+notify()->success($message, 'Success', 'alert');
 ```
 
 You can also use a custom or pre-defined alert by adding it to the config under the preset.
