@@ -3,20 +3,20 @@
 use Marjose\notify\notify;
 
 if (! function_exists('notify')) {
-    function notify(string $message = null, string $title = null): notify
+    function notify(string $message = null, string $title = null, $model = 'alert'): notify
     {
         $notify = app('notify');
 
         if (! is_null($message)) {
             switch ($title) {
                 case "error":
-                    return $notify->error($message, $title);
+                    return $notify->error($message, $title, $model);
                 case "warning":
-                    return $notify->warning($message, $title);
+                    return $notify->warning($message, $title, $model);
                 case "info":
-                    return $notify->info($message, $title);
+                    return $notify->info($message, $title, $model);
                 default:
-                    return $notify->success($message, $title);
+                    return $notify->success($message, $title, $model);
             }
         }
 
