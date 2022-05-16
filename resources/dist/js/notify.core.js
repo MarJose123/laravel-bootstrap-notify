@@ -1,0 +1,1 @@
+/* This will be the JS API to call the toast notification without the being loaded or refresh */
