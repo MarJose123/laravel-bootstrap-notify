@@ -1,6 +1,3 @@
-
-import 'alpinejs';
-
 const notification = document.querySelector('div.notify');
 
 if (notification) {
