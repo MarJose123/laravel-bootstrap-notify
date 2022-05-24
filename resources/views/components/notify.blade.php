@@ -15,5 +15,8 @@
 <script>
     let notify = {
         timeout: "{{ config('notify.timeout') }}",
+        preset: {{ config('notify.preset-messages') }}
     }
+
+    window.notify = notify;
 </script>
